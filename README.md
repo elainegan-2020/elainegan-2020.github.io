@@ -1,4 +1,4 @@
-# Personal Homepage (updated on Sept. 20, 2021)
+# Personal Homepage
 
 Personal homepage website: https://elainegan-2020.github.io.
 
