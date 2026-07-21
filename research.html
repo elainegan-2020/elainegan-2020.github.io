@@ -2,13 +2,15 @@
 <!doctype html>
 <html lang="en">
   <head>
- <!-- <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script> -->
- <script type="text/x-mathjax-config">
-   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
- </script>
- <script type="text/javascript"
-   src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
- </script>
+ <!-- MathJax v3: render TeX using $...$ and $$...$$ -->
+  <script>
+    window.MathJax = {
+      tex: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      options: {skipHtmlTags: ['script','noscript','style','textarea','pre']},
+      svg: {fontCache: 'global'}
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -115,7 +117,7 @@
                 </button>
                 <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
 <p>Let $F$ be a bipartite graph on $a+b$ vertices whose critical chromatic number $\chi_{cr}(F)=\frac{a+b}{b}$.
-K\"uhn and Osthus (SODA 2006) showed that for any given $\varepsilon>0$ the decision problem for $F$-factors in $n$-vertex graphs $G$ with minimum degree $(1 - 1/\chi_{cr}(F)-\varepsilon)n$ is NP-complete, when $F$ is either a complete graph on at least three vertices, or a complete multipartite graph whose second smallest vertex class has size at least 2.
+Kühn and Osthus (SODA 2006) showed that for any given $\varepsilon>0$ the decision problem for $F$-factors in $n$-vertex graphs $G$ with minimum degree $(1 - 1/\chi_{cr}(F)-\varepsilon)n$ is NP-complete, when $F$ is either a complete graph on at least three vertices, or a complete multipartite graph whose second smallest vertex class has size at least 2.
 On the other hand, Han and Treglown (JCTB, 2020) showed that this is indeed the correct threshold for tractability: for any given $\varepsilon>0$ the decision problem for $F$-factors in $n$-vertex graphs $G$ with minimum degree $(1 - 1/\chi_{cr}(F)+\varepsilon)n$ is tractable, that is, the problem admits a polynomial-time algorithm.</p>
 
 <p>
@@ -129,7 +131,7 @@ Indeed, we present an algorithm running in $O(n^{2^{b+2}(a+b)^{2}}+2^{O(bc)})$ t
                   <b>Decision problem for Hamilton 2-cycles in 4-graphs</b>
                    <br> with <a href="https://jiehan773.github.io/" target="_blank">Jie Han</a> and Bin Wang
                    <br>
-                   <a href="https://arxiv.org/abs/2607.11872" target="_blank">arXiv preprint</a>
+                   <a href="https://arxiv.org/abs/2607.11872" target="_blank">arXiv preprint</a><br>
                 <button class="accordion">
                 Abstract
                 </button>
