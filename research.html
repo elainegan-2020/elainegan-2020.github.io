@@ -116,14 +116,16 @@
                 Abstract
                 </button>
                 <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
-<p>Let $F$ be a bipartite graph on $a+b$ vertices whose critical chromatic number $\chi_{cr}(F)=\frac{a+b}{b}$.
-Kühn and Osthus (SODA 2006) showed that for any given $\varepsilon>0$ the decision problem for $F$-factors in $n$-vertex graphs $G$ with minimum degree $(1 - 1/\chi_{cr}(F)-\varepsilon)n$ is NP-complete, when $F$ is either a complete graph on at least three vertices, or a complete multipartite graph whose second smallest vertex class has size at least 2.
-On the other hand, Han and Treglown (JCTB, 2020) showed that this is indeed the correct threshold for tractability: for any given $\varepsilon>0$ the decision problem for $F$-factors in $n$-vertex graphs $G$ with minimum degree $(1 - 1/\chi_{cr}(F)+\varepsilon)n$ is tractable, that is, the problem admits a polynomial-time algorithm.</p>
+<p>We investigate an Ore-type fixed-parameter algorithmic version of the equitable $k$-coloring theorem. Given $r\ge 3$, let $k=\lceil n/r\rceil$, and let $c$ be the parameter. 
+For sufficiently large $n$, given an $n$-vertex graph $G$ satisfying the Ore-type condition
+$ d_G(x)+d_G(y)< 2k+c$ for every edge $xy\in E(G)$, our algorithm decides whether $G$ admits an equitable $k$-coloring and outputs one whenever it exists. 
+The running time is $n^{O(1)}+2^{O(c^{r^{r+2}})}$ for $r\ge 4$ and $n^{O(1)}+2^{O(c)}$ for $r=3$. </p>
 
 <p>
-In this paper we investigate the critical window of this problem for bipartite $F$.
-In particular, we prove that for any $n$-vertex graph $G$ with minimum degree $(1 - 1/\chi_{cr}(F))n - c$, the problem of deciding whether $G$ contains an $F$-factor is \emph{fixed-parameter tractable} parameterized by $c$. 
-Indeed, we present an algorithm running in $O(n^{2^{b+2}(a+b)^{2}}+2^{O(bc)})$ time that outputs either the desired $F$-factor or a certificate showing that none exists.</p>    
+The algorithm is obtained via the complement formulation. An equitable $k$-coloring of $G$ is exactly a $\{pK_{r-1}, (k-p)K_r\}$-factor in $\overline G$ with $p=kr-n$, and the above Ore-type upper bound becomes
+$\sigma(\overline G) \ge 2(1-1/r)n-(c+2)$,
+where $\sigma(\overline G)$ denotes the minimum degree sum over all non-edges of $\overline G$.
+Thus the core ingredient is a fixed-parameter algorithm for deciding and finding clique-factors under this Ore-type degree-sum condition.  </p>    
           </li><br>
 
         <li>
@@ -156,23 +158,21 @@ This stands as a steep contrast to the graph case where such a hardness gap has 
                 Abstract
                 </button>
                 <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
-<p>We investigate an Ore-type fixed-parameter algorithmic version of the equitable $k$-coloring theorem. Given $r\ge 3$, let $k=\lceil n/r\rceil$, and let $c$ be the parameter. 
-For sufficiently large $n$, given an $n$-vertex graph $G$ satisfying the Ore-type condition
-$ d_G(x)+d_G(y)< 2k+c$ for every edge $xy\in E(G)$, our algorithm decides whether $G$ admits an equitable $k$-coloring and outputs one whenever it exists. 
-The running time is $n^{O(1)}+2^{O(c^{r^{r+2}})}$ for $r\ge 4$ and $n^{O(1)}+2^{O(c)}$ for $r=3$. </p>
+<p>Let $F$ be a bipartite graph on $a+b$ vertices whose critical chromatic number $\chi_{cr}(F)=\frac{a+b}{b}$.
+Kühn and Osthus (SODA 2006) showed that for any given $\varepsilon>0$ the decision problem for $F$-factors in $n$-vertex graphs $G$ with minimum degree $(1 - 1/\chi_{cr}(F)-\varepsilon)n$ is NP-complete, when $F$ is either a complete graph on at least three vertices, or a complete multipartite graph whose second smallest vertex class has size at least 2.
+On the other hand, Han and Treglown (JCTB, 2020) showed that this is indeed the correct threshold for tractability: for any given $\varepsilon>0$ the decision problem for $F$-factors in $n$-vertex graphs $G$ with minimum degree $(1 - 1/\chi_{cr}(F)+\varepsilon)n$ is tractable, that is, the problem admits a polynomial-time algorithm.</p>
 
 <p>
-The algorithm is obtained via the complement formulation. An equitable $k$-coloring of $G$ is exactly a $\{pK_{r-1}, (k-p)K_r\}$-factor in $\overline G$ with $p=kr-n$, and the above Ore-type upper bound becomes
-$\sigma(\overline G) \ge 2(1-1/r)n-(c+2)$,
-where $\sigma(\overline G)$ denotes the minimum degree sum over all non-edges of $\overline G$.
-Thus the core ingredient is a fixed-parameter algorithm for deciding and finding clique-factors under this Ore-type degree-sum condition.   </p>
+In this paper we investigate the critical window of this problem for bipartite $F$.
+In particular, we prove that for any $n$-vertex graph $G$ with minimum degree $(1 - 1/\chi_{cr}(F))n - c$, the problem of deciding whether $G$ contains an $F$-factor is \emph{fixed-parameter tractable} parameterized by $c$. 
+Indeed, we present an algorithm running in $O(n^{2^{b+2}(a+b)^{2}}+2^{O(bc)})$ time that outputs either the desired $F$-factor or a certificate showing that none exists. </p>
           </li><br>
 
 
 
           <li>
                 <p style="margin:0">
-                  <b>Note on the codegree version of the Erdos-Ko-Rado theorem</b>
+                  <b>Note on the codegree version of the Erd\H{o}s-Ko-Rado theorem</b>
                    <br> with <a href="https://jiehan773.github.io/" target="_blank">Jie Han</a> and <a href="https://seonghyukim.github.io/" target="_blank">Seonghyuk Im</a>
                    <br>
                    <a href="https://arxiv.org/abs/2605.17945" target="_blank">arXiv preprint</a>
